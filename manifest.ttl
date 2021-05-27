@@ -1,0 +1,11 @@
+@base <http://barnard59.zazuko.com/operations/carml/> .
+@prefix code: <https://code.described.at/> .
+@prefix p: <https://pipeline.described.at/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<transform> a p:Operation, p:Writable, p:ReadableObjectMode;
+  rdfs:label "Carml transform";
+  rdfs:comment "Transforms an XML stream based on a given Carml mapping.";
+  code:implementedBy [ a code:EcmaScript;
+    code:link <node:barnard59-carml/transform.js>
+  ].
