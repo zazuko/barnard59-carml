@@ -2,7 +2,7 @@
   "name": "barnard59-carml",
   "version": "0.1.0",
   "description": "Carml support for Barnard59 Linked Data pipelines",
-  "main": "index.js",
+  "main": "transform.js",
   "scripts": {
     "coverage": "codecov",
     "postinstall": "node install.js",
