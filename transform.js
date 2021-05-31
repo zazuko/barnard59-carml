@@ -1,4 +1,5 @@
 const { spawn } = require('child_process')
+const { resolve } = require('path')
 const N3Parser = require('@rdfjs/parser-n3')
 const duplexify = require('duplexify')
 const getStream = require('get-stream')
@@ -47,6 +48,6 @@ async function transform ({ mapping, mappingFile }) {
 }
 
 transform.jarUrl = new URL('https://github.com/netage/carml-cli/releases/download/cli-1.1.1/cli-1.1.1-SNAPSHOT-jar-with-dependencies.jar')
-transform.jar = './carml-cli.jar'
+transform.jar = resolve(__dirname, './carml-cli.jar')
 
 module.exports = transform
