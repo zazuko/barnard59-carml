@@ -1,6 +1,6 @@
 {
   "name": "barnard59-carml",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Carml support for Barnard59 Linked Data pipelines",
   "main": "transform.js",
   "scripts": {
