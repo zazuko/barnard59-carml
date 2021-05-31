@@ -6,7 +6,7 @@
   "scripts": {
     "coverage": "codecov",
     "postinstall": "node install.js",
-    "test": "standard && c8 --reporter=lcov --reporter=text mocha"
+    "test": "standard && c8 --reporter=lcov --reporter=text mocha --timeout=10000"
   },
   "repository": {
     "type": "git",
