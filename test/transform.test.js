@@ -1,7 +1,7 @@
 const { strictEqual, rejects } = require('assert')
-const { createReadStream } = require('fs')
-const { readFile } = require('fs/promises')
+const { createReadStream, readFile: readFileCallback } = require('fs')
 const { join } = require('path')
+const { promisify } = require('util')
 const getStream = require('get-stream')
 const { isReadable, isWritable } = require('isstream')
 const { describe, it } = require('mocha')
@@ -9,6 +9,7 @@ const rdf = require('rdf-ext')
 const ns = require('./namespaces.js')
 const transform = require('../transform.js')
 
+const readFile = promisify(readFileCallback)
 const simpleXmlFile = join(__dirname, 'support/simple.xml')
 const simpleMappingFile = join(__dirname, 'support/simple.carml.ttl')
 
