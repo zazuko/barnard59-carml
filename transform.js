@@ -10,6 +10,8 @@ const temp = require('./lib/temp.js')
 function carmlCli ({ mappingFile, onError }) {
   const carml = spawn('java', [
     '-jar', transform.jar,
+    'map',
+    '--format=ttl',
     '-m', mappingFile,
     '-of', 'nt'
   ])
@@ -47,7 +49,7 @@ async function transform ({ mapping, mappingFile }) {
   return stream
 }
 
-transform.jarUrl = new URL('https://github.com/netage/carml-cli/releases/download/cli-1.1.1/cli-1.1.1-SNAPSHOT-jar-with-dependencies.jar')
+transform.jarUrl = new URL('http://ktk.netlabs.org/misc/rdf/carml-jar-1.0.0-SNAPSHOT-0.4.4.jar')
 transform.jar = resolve(__dirname, './carml-cli.jar')
 
 module.exports = transform
