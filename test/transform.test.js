@@ -91,9 +91,10 @@ describe('transform', () => {
     await rejects(async () => {
       await getStream.array(stream)
     }, err => {
+      console.log(err.message)
       strictEqual(err.message.includes('carml'), true)
-      strictEqual(err.message.includes('code'), true)
-      strictEqual(err.message.includes('Exception in'), true)
+      strictEqual(err.message.includes('CarmlJarException'), true)
+      strictEqual(err.message.includes('Exception'), true)
 
       return true
     })

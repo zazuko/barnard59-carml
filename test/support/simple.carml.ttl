@@ -7,7 +7,7 @@ PREFIX rr: <http://www.w3.org/ns/r2rml#>
 <root>
   rml:logicalSource [
     rml:source [ a carml:Stream;
-      carml:streamName "stdin"
+      carml:streamName ""
     ];
     rml:referenceFormulation ql:XPath;
     rml:iterator "/root"
